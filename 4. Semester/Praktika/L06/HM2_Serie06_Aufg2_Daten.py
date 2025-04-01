@@ -7,6 +7,7 @@ Höhere Mathematik 2, Serie 6, Aufgabe 2, Daten
 @author: knaa
 """
 import numpy as np
+import matplotlib.pyplot as plt
 
 data = np.array([[33.00, 53.00, 3.32, 3.42, 29.00],
         [31.00, 36.00, 3.10, 3.26, 24.00],
@@ -40,3 +41,29 @@ data = np.array([[33.00, 53.00, 3.32, 3.42, 29.00],
         [37.00, 35.00, 2.75, 2.64, 19.00],
         [35.00, 35.00, 2.59, 2.59, 16.00],
         [37.00, 37.00, 2.73, 2.59, 22.00]])
+
+    
+X = data[:, :-1]
+y = data[:, -1]
+
+X = np.hstack((X, np.ones((X.shape[0], 1))))
+
+# Normal equation
+lambda_coeffs = np.linalg.inv(X.T @ X) @ X.T @ y
+
+print("Computed coefficients (lambda values):", lambda_coeffs)
+
+print(f"m_CH = {lambda_coeffs[0]:.4f} * T_Tank + {lambda_coeffs[1]:.4f} * T_Benzin + "
+      f"{lambda_coeffs[2]:.4f} * p_Tank + {lambda_coeffs[3]:.4f} * p_Benzin + {lambda_coeffs[4]:.4f}")
+
+y_pred = X @ lambda_coeffs
+
+plt.figure(figsize=(8, 5))
+plt.scatter(y, y_pred, color='blue', label="Predicted vs Actual")
+plt.plot([min(y), max(y)], [min(y), max(y)], color='red', linestyle='--', label="Perfect Fit")
+plt.xlabel("Actual m_CH")
+plt.ylabel("Predicted m_CH")
+plt.title("Linear Regression: Predicted vs Actual Values (Exercise 2)")
+plt.legend()
+plt.grid(True)
+plt.show()
