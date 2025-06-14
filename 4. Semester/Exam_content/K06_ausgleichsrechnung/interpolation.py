@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from scipy import interpolate
 from scipy.optimize import minimize
 import sympy as sp
+from support_functions.plotting import plot_data_and_fit
 
 
 def lagrange_interpolation(x_data, y_data, x_eval):

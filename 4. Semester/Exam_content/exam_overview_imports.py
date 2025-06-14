@@ -202,7 +202,7 @@ CONVENIENCE FUNCTIONS:
 # run_all_chapter8_examples: Run all Chapter 8 examples
 # run_all_examples: Run ALL examples from all chapters
 """
-from common_exam_problems import atmospheric_pressure_example, temperature_density_example, boeing_landing_example
+
 
 
 

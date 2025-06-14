@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import integrate
+import sympy as sp
 import math
 
 # custom import for trapezoidal rule

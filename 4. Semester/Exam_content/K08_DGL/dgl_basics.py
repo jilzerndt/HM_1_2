@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 import matplotlib.patches as patches
+import sympy as sp
+from support_functions.plotting import quick_plot
 
 
 

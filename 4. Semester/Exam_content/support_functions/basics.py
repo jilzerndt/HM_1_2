@@ -6,7 +6,9 @@ Basic support functions for the exam content module.
 import numpy as np
 import sympy as sp
 import matplotlib.pyplot as plt
+import pandas as pd
 from scipy.optimize import fsolve
+from scipy.linalg import qr, solve
 
 # You might also need these:
 # =============================================================================

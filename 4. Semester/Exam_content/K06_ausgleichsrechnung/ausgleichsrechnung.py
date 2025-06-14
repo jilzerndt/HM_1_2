@@ -2,7 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import interpolate
 from scipy.optimize import minimize
+from scipy.linalg import qr, solve
 import sympy as sp
+from support_functions.plotting import plot_data_and_fit
 
 # =============================================================================
 # LINEAR LEAST SQUARES

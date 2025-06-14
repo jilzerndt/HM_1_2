@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import integrate
+import sympy as sp
 import math
+from int_rules import rectangle_rule, trapezoidal_rule, simpson_rule
 
 
 def error_analysis(f, f_second_deriv, f_fourth_deriv, a, b, h):
