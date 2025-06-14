@@ -14,6 +14,13 @@ import pandas as pd
 # QUICK SETUP FUNCTIONS
 # =============================================================================
 
+# Setup matplotlib for better plots
+plt.rcParams['figure.figsize'] = (10, 6)
+plt.rcParams['font.size'] = 11
+plt.rcParams['lines.linewidth'] = 2
+plt.rcParams['grid.alpha'] = 0.3
+
+
 def setup_plotting():
     """Setup matplotlib for better plots"""
     plt.rcParams['figure.figsize'] = (10, 6)
