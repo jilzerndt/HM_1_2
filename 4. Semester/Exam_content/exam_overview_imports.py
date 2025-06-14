@@ -36,6 +36,12 @@ MATRIX AND LINEAR ALGEBRA HELPERS
 """
 from support_functions.basics import load_and_preview_data, quick_error_analysis, evaluate_at_point, quick_matrix_analysis, solve_normal_equations
 
+"""
+PLOTTING: Functions for quick and effective plotting
+# =============================================================================
+
+"""
+
 # Setup matplotlib for better plots
 plt.rcParams['figure.figsize'] = (10, 6)
 plt.rcParams['font.size'] = 11
